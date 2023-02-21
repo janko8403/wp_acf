@@ -1,0 +1,33 @@
+{
+  "name": "Tikrow",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "autoprefixer": "postcss css/*.css --use autoprefixer -r",
+    "sass": "sass src/sass/app.scss css/app.css --style=compressed",
+    "uglify": "uglifyjs src/js/*.js - -o js/app.js && uglifyjs src/js/*.js -m -c -o js/app.min.js",
+    "build:all": "npm run uglify && npm run build:css",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "build:js": "npm run uglify",
+    "watch:css": "onchange \"src/sass/**/*.scss\" -- npm run build:css",
+    "watch:js": "onchange \"src/js/**/*.js\" -- npm run build:js"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "sass": "^1.54.8",
+    "uglify-js": "^3.17.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
+}

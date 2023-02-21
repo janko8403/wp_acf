@@ -1,0 +1,430 @@
+header {
+    &.navbar-top {
+        background: $gray;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 10px 0 0;
+        z-index: 999;
+        @include transition(all, .3s, ease);
+
+        @include breakpoint(md) {
+            padding: 10px 0;
+        }
+    
+        &_shadow {
+            box-shadow: 0 0 10px rgba(0,0,0, .2);
+        }
+
+        &_blue {
+            background-color: $blue;
+
+            nav {
+                &.navbar-top {
+                    a.item-nav {
+                        &.item-contact {
+                            background: $white_light !important;
+
+                            &:hover {
+                                background: $red !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &_granat {
+            background-color: $granat;
+        }
+
+        .hamburger {
+            text-align: center;
+            padding: 8px 15px 0 0;
+            display: block;
+            cursor: pointer;
+
+            @include breakpoint(md) {
+                display: none;
+            }
+
+            svg, span {
+                display: block;
+            }
+
+            span {
+                font-size: .8rem;
+                line-height: 1rem;
+            }
+
+        }
+
+        .logo {
+            img {
+                margin-top: 10px;
+            }
+        }
+        
+        nav {
+            &.navbar-top {
+                margin-top: 13px;
+
+                &.navbar-main {
+                    display: none;
+
+                    @include breakpoint(md) {
+                        display: block;
+                    }
+
+                    ul {
+                        list-style-type: none;
+
+                        &.nav-list-primary {
+                            li {
+                                display: inline-block;
+
+                                &.current-menu-item {
+                                    a {
+                                        color: $red;
+                                    }
+                                }
+
+                                a {
+                                    font-family: $euclidSemibold;
+                                    font-size: 1.7rem;
+                                    line-height: 1.6rem;
+                                    color: $nav;
+                                    text-decoration: none;
+                                    padding: 5px 10px;
+                                    @include transition(all, .3s, ease);
+                            
+                                    &:hover {
+                                        text-decoration: none;
+                                        color: $red;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+
+                .dropdown {
+                    display: inline-block;
+                    position: relative;
+
+                    &:hover {
+                        .dropdown-content {
+                            max-height: 500px;
+                            min-width: 200px;
+                            transition: max-height 0.25s ease-in;
+                        }
+                    }
+
+                    .dropdown-content {
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 98;
+                        max-height: 0;
+                        min-width: 200px;
+                        transition: max-height 0.15s ease-out;
+                        overflow: hidden;
+                        margin-top: 20px;
+                        display: none;
+                        border-radius: 16px;
+                        
+                        .dropdown-account, .dropdown-employee, .dropdown-company {
+                            padding: 15px 20px 10px;
+
+                            a {
+                                &:first-child {
+                                    border-bottom: 1px solid $gray;
+                                }
+                            }
+                        }
+
+                        .dropdown-account, .dropdown-employee, .dropdown-company {
+                            display: none;
+                        }
+
+                        .active-dropdown {
+                            display: block;
+                        }
+
+                        @include breakpoint(md) {
+                            display: block;
+                        }
+
+                        a {
+                            font-family: $euclidRegular;
+                            font-size: 1.7rem;
+                            line-height: 1.6rem;
+                            color: $nav;
+                            padding: 12px 0;
+                            text-decoration: none;
+                            display: block;
+                            position: relative;
+
+                            &.login-link, &.register-link {
+                                position: relative;
+                                cursor: pointer;
+
+                                &_back {
+                                    padding-left: 20px;
+
+                                    &:hover {
+                                        color: $nav;
+                                    }
+
+                                    &:after {
+                                        display: none;
+                                    }
+
+                                    &:before {
+                                        position: absolute;
+                                        content: url(../img/arrow-right.png);
+                                        top: 26%;
+                                        left: 0;
+                                        width: 16px;
+                                        height: 16px;
+                                        transform: rotate(-180deg);
+                                    }
+                                }
+    
+                            }
+
+                            &:after {
+                                position: absolute;
+                                content: url(../img/arrow-right.png);
+                                top: 26%;
+                                right: 0;
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            &:hover {
+                                color: $red;
+                            }
+                        }
+                    }
+
+                    a.item-nav {
+                        font-family: $euclidSemibold;
+                        font-size: 1.7rem;
+                        line-height: 1.6rem;
+                        color: $nav;
+                        text-decoration: none;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                        @include transition(all, .3s, ease);
+                
+                        &:hover {
+                            text-decoration: none;
+                            color: $red;
+                        }
+
+                        &.item-account {
+                            display: inline-block;
+                            text-align: center;
+                            position: relative;
+                            top: -7px;
+
+                            @include breakpoint(md) {
+                                top: 0;
+                            }
+
+                            span {
+                                &.item-desktop {
+                                    display: none;
+
+                                    @include breakpoint(md) {
+                                        display: inline-block;
+                                    }
+                                }
+
+                                &.item-mobile {
+                                    display: table;
+                                    text-transform: uppercase;
+                                    font-size: .8rem;
+
+                                    @include breakpoint(md) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+        
+                a.item-nav {
+                    font-family: $euclidSemibold;
+                    font-size: 1.7rem;
+                    line-height: 1.6rem;
+                    color: $nav;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    @include transition(all, .3s, ease);
+                    
+                    &:hover {
+                        text-decoration: none;
+                        color: $red;
+                    }
+        
+                    &.item-account, &.item-contact {
+                        font-size: 1.4rem;
+                        svg {
+                            position: relative;
+                            top: -2px;
+        
+                            circle, path {
+                                fill: $nav;
+                            }
+                        }
+                    }
+
+                    &.item-contact {
+                        background: $blue;
+                        border-radius: 36px;
+                        padding: 14px 25px 10px;
+
+                        &:hover {
+                            color: $nav;
+                            background: $red;
+
+                            svg {
+                                -webkit-animation: animation-phone 1s infinite ease-in-out;
+                                -moz-animation: animation-phone 1s infinite ease-in-out;
+                                -ms-animation: animation-phone 1s infinite ease-in-out;
+                                -o-animation: animation-phone 1s infinite ease-in-out;
+                                animation: animation-phone 1s infinite ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@-moz-keyframes animation-phone {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    50% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    100% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+}
+
+@-webkit-keyframes animation-phone {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    50% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    100% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+}
+
+@-o-keyframes animation-phone {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    50% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    100% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+}
+
+@keyframes animation-phone {
+    0% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg)
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg)
+    }
+
+    50% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+
+    100% {
+        transform: rotate(0) scale(1) skew(1deg)
+    }
+}

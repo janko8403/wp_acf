@@ -1,0 +1,112 @@
+.contact-box {
+    background: transparent;
+    background: $white_light;
+    border-radius: 16px;
+
+    &_none-radius {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+        font-family: $euclidSemibold;
+
+        @include breakpoint(md) {
+            font-size: 4.4rem;
+            line-height: 5.8rem;
+        }
+    }
+
+    h5 {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-family: $euclidMedium;
+
+        @include breakpoint(md) {
+            font-size: 2.4rem;
+            line-height: 3.8rem;
+        }
+
+        &.text-bold {
+            font-family: $euclidSemibold;
+        }
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 2.9rem;
+        font-family: $euclidMedium;
+        padding-left: 30px;
+
+        &.small {
+            font-family: $euclidRegular;
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+            padding-left: 0;
+        }
+
+        a {
+            color: $granat;
+            text-decoration: none;
+        }
+        
+        &.address {
+            font-family: $euclidSemibold;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: 0;
+                top: -2px;
+            }
+
+            &_phone {
+                &:before {
+                    content: url(../img/address/phone.png);
+                }
+            }
+
+            &_mail {
+                &:before {
+                    content: url(../img/address/mail.png);
+                }
+            }
+
+            &_facebook {
+                &:before {
+                    content: url(../img/address/chat.png);
+                }
+            }
+
+            &_list {
+                &:before {
+                    content: url(../img/address/home.png);
+                }
+            }
+
+        }
+    }
+
+}
+#map {
+    width: 100%;
+}
+
+.contact-partner {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    height: 218px;
+}
+
+.contact-business {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    height: 100%;
+}
+

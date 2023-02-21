@@ -1,0 +1,39 @@
+.send-alert {
+    margin-top: 20px;
+    display: none;
+    padding: 8px 20px 5px;
+    background: transparent;
+    border-radius: 25px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+    ul {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    &.error {
+        border: 1px solid $red;
+        background: $red;
+        color: $white;
+    }
+
+    &.success {
+        border: 1px solid $blue;
+        background: $blue;
+        color: $white;
+    }
+}
+
+.errorText {
+    display: none;
+    color: $red;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0;
+}

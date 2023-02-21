@@ -1,0 +1,88 @@
+.checkboxcontainer {
+    display: block;
+    padding-left: 35px;
+    padding-top: 5px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-family: $euclidRegular;
+
+    a {
+        text-decoration: none;
+        color: $granat;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    span {
+        color: $red;
+    }
+
+    input {
+        display: none;
+
+        &:checked+.checkmark {
+            background-color: $white_light;
+            border: 1px solid $border-input;
+        }
+
+        &:indeterminate+.checkmark {
+            background-color: transparent;
+            border: 1px solid $border-input;
+        }
+
+        &:checked+.checkmark:after {
+            content: "";
+            position: absolute;
+            height: 6px;
+            width: 11px;
+            border-left: 2px solid $red;
+            border-bottom: 2px solid $red;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:checked+.checkmark_active:after {
+            border-left: 2px solid $granat;
+            border-bottom: 2px solid $granat;
+        }
+
+        &:checked:disabled+.checkmark {
+            border: 1px solid $border-input;
+            background-color: $border-input;
+        }
+
+        &:disabled+.checkmark {
+            border: 1px solid $border-input;
+        }
+
+        &:indeterminate+.checkmark:after {
+            content: "";
+            position: absolute;
+            height: 0px;
+            width: 11px;
+            border-left: 2px solid $border-input;
+            border-bottom: 2px solid $border-input;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+    }
+
+    .checkmark {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: $white_light;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid $border-input;
+        border-radius: 0;
+    }
+}

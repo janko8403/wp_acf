@@ -1,0 +1,175 @@
+.newsletter {
+    margin-top:50px;
+    margin-bottom:50px;
+    display: flex;
+    flex-direction: row;
+
+    .form-flex {
+        width: 100%;
+        background-color: $granat;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 30px 40px;
+
+        @include breakpoint(md) {
+            width: 60%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .header-title {
+            color: $white_light;
+            font-family: $euclidSemibold;
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 2.9rem;
+            letter-spacing: -0.5px;
+
+            @include breakpoint(md) {
+                text-align: left;
+                font-size: 3.2rem;
+                line-height: 3.8rem;
+                letter-spacing: -0.01em;
+            }
+        }
+
+        p {
+            color: $white_light;
+            font-size: 1.8rem;
+            line-height: 2.9rem;
+            font-family: $euclidLight;
+            text-align: center;
+
+            @include breakpoint(md) {
+                text-align: left;
+                line-height: 2.2rem;
+            }
+        }
+
+        .send-form {
+            .form-group {
+                .input-placeholder {
+                    width: 100%;
+
+                    @include breakpoint(md) {
+                        width: 69%;
+                    }
+
+                    @include breakpoint(md-lg) {
+                        width: 75%;
+                    }
+                }
+
+                .checkboxcontainer {
+                    font-size: 1.2rem;
+                    color: $white_light;
+                    line-height: 2rem;
+                }
+
+                button {
+                    margin-left: 15%;
+                    width: 85%;
+                    position: relative;
+                    
+                    &:before {
+                        display: block;
+                        position: absolute;
+                        content: '\2192';
+                        font-size: 1.8rem;
+                        padding: 11px 0;
+                        top: 0;
+                        left: -22%;
+                        width: 50px;
+                        height: 100%;
+                        border-radius: 50%;
+                        background: $red;
+                        transition: opacity .5s ease-out;
+                        -moz-transition: opacity .3s ease-out;
+                        -webkit-transition: opacity .3s ease-out;
+                        -o-transition: opacity .3s ease-out;
+                
+                        @include breakpoint(sm) {
+                            display: none;
+                        }
+                    }
+
+                    @include breakpoint(md) {
+                        width: auto;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .group-collapsible {
+        margin-top: 7px;
+        margin-left: 17px;
+
+        .collapsible {
+            color: $white_light;
+            cursor: pointer;
+            padding: 0 18px;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            font-family: $euclidLight;
+            position: relative;
+            display: table;
+
+            &:after {
+                position: absolute;
+                margin-left: 10px;
+                content: "▼";
+                color: $red;
+            }
+
+            &.active-collapsible {
+                &:after {
+                    content: "▲";
+                }
+            }
+
+        }
+
+        .content {
+            display: none;
+            overflow: hidden;
+
+            p {
+                font-size: 1.2rem;
+                line-height: 2rem;
+                font-family: $euclidLight;
+                color: $white_light;
+                padding: 0 0 0 18px;
+
+                a {
+                    color: $white_light;
+                    text-decoration: none;
+
+                    &:hover, &:focus {
+                        color: $white_light;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .img-right {
+        width: 40%;
+        background-color: $blue;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 30px;
+        display: none;
+
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+}

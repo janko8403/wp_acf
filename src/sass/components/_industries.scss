@@ -1,0 +1,56 @@
+.industries {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 0;
+
+    li {
+        color: $granat_opacity;
+        font-family: $euclidSemibold;
+        font-size: 1.9rem;
+        line-height: 2.9rem;
+        position: relative;
+        padding-left: 45px;
+        cursor: pointer;
+        @include transition(all, .3s, ease);
+
+        @include breakpoint(md) {
+            font-size: 3.8rem;
+            line-height: 4.8rem;
+        }
+
+        &.active-industries {
+            color: $granat;
+            
+            &:before {
+                background: $red;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            background: #fff;
+            opacity: 1;
+            border-radius: 50%;
+            left: 0px;
+            top: 0;
+
+            @include breakpoint(md) {
+                top: 8px;
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        &:hover {
+            color: $granat;
+            
+            &:before {
+                background: $red;
+            }
+        }
+    }
+}

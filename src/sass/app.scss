@@ -1,0 +1,33 @@
+//Vendors
+@import 'vendors/bootstrap.min';
+
+// Common
+@import 'common/fonts';
+@import 'common/vars';
+@import 'common/mixins';
+@import 'common/typography';
+@import 'common/misc';
+
+// Components
+@import 'components/preloader';
+@import 'components/nav';
+@import 'components/nav_mobile';
+@import 'components/button';
+@import 'components/accordion';
+@import 'components/collapsible';
+@import 'components/swiper';
+@import 'components/industries';
+@import 'components/badge';
+@import 'components/input';
+@import 'components/checkbox';
+@import 'components/form';
+@import 'components/offers';
+@import 'components/contact';
+@import 'components/breadcrumb';
+@import 'components/contact_col';
+@import 'components/posts-col';
+@import 'components/newsletter';
+
+// Partials
+@import 'partials/base';
+@import 'partials/footer';

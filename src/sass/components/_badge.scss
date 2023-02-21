@@ -1,0 +1,30 @@
+.badge-container {
+    // display: flex;
+    // flex-direction: row;
+    // align-items: flex-start;
+    // gap: 10.5px;
+
+    .badge {
+        background: $blue;
+        padding: 8px 15px 7px;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $granat;
+        font-family: $euclidRegular;
+        border-radius: 30px;
+        margin: 6px 3px;
+
+        @include breakpoint(md) {
+            padding: 8px 15px 7px;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+    }
+
+    &_active {
+        .badge {
+            background: $red;
+            color: $white;
+        }
+    }
+}

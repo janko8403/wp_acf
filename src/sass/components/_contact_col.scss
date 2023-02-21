@@ -1,0 +1,68 @@
+.contact-col {
+    width: auto;
+    margin: 0 auto;
+
+    @include breakpoint(md) {
+        margin: 0 10px;
+    }
+
+    &_content {
+        background-color: $light-gray;
+        padding: 25px 10px 20px;
+        position: relative;
+        top: -10px;
+
+        p {
+            text-align: center;
+            margin-bottom: 3px;
+            &.name {
+                font-family: $euclidSemibold;
+                font-size: 2.1rem;
+                line-height: 2.5rem;
+                letter-spacing: -0.5px;
+
+                @include breakpoint(md) {
+                    font-size: 2.4rem;
+                    line-height: 2.9rem;
+                }
+            }
+
+            &.position {
+                font-family: $euclidLight;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                margin-bottom: 10px;
+            }
+            
+            &.position-expert {
+                font-family: $euclidLight;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                min-height: 55px;
+            }
+
+            &.contact {
+                margin-bottom: 13px;
+                font-family: $euclidRegular;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                letter-spacing: -0.25px;
+                a {
+                    color: $granat;
+                    text-decoration: none;
+                    border-bottom: 2px solid $blue;
+                    padding-bottom: 6px;
+                    font-family: $euclidRegular;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+
+                    &:hover {
+                        color: $granat;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

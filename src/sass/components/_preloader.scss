@@ -1,0 +1,32 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255,.9);
+    z-index: 9999;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    &_hide {
+        display: none;
+    }
+    
+    .loading {
+        height: 80px;
+        width: 80px;
+        border: 6px solid $blue;
+        border-right-color: $red;
+        border-radius: 50%;
+        -webkit-animation: rotate 1s infinite linear;
+    }
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,58 @@
+ul.breadcrumb {
+    padding: 10px 16px 10px 0;
+    list-style: none;
+    margin-bottom: 30px;
+
+    &_white {
+        li {
+            color: $white_light;
+            a {
+                color: $white_light;
+
+                &:hover {
+                    color: $white_light;
+                }
+            }
+        }
+
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: url(../img/arrow-breadcrumb_white.svg);
+        }
+    }
+
+    li {
+        display: inline;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-family: $euclidMedium;
+        color: $dark_granat;
+
+        @include breakpoint(md) {
+            font-size: 1.4rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: $dark_granat;
+            text-decoration: none;
+
+            @include breakpoint(md) {
+                font-size: 1.4rem;
+            }
+
+            &:hover {
+                color: $dark_granat;
+                text-decoration: none;
+            }
+        }
+    }
+
+    li+li:before {
+        padding: 8px;
+        color: black;
+        content: url(../img/arrow-breadcrumb.svg);
+    }
+}

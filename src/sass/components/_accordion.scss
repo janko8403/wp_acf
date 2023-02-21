@@ -1,0 +1,178 @@
+button.accordion {
+    width: 100%;
+    background: $granat;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 15px 0;
+    font-family: $euclidSemibold;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $white;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+
+    @include breakpoint(md) {
+        padding: 15px 20px;
+    }
+
+    &:after {
+        content: url('../img/arrow-down.svg');
+        float: right;
+    }
+
+    &.is-open {
+        background: $granat;
+        &:after {
+            content: url('../img/arrow-down.svg');
+            transform: rotate(-180deg);
+        }
+    }
+
+    &:hover {
+        background: $granat;
+    }
+
+    &_white {
+        background: $white_light;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $granat;
+        border-radius: 16px;
+        padding: 38px 20px 32px;
+
+        @include breakpoint(md) {
+            padding: 38px 40px 32px;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+
+        span {
+            color: $blue;
+            margin-right: 5px;
+
+            @include breakpoint(md) {
+                margin-right: 30px;
+            }
+        }
+
+        &.is-open {
+            background: $white_light;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:after {
+                content: url('../img/arrow-down-granat.svg');
+                transform: rotate(-180deg);
+            }
+        }
+
+        &:hover {
+            background: $white_light;
+        }
+
+        &:after {
+            content: url('../img/arrow-down-granat.svg');
+            float: right;
+        }
+    }
+
+    &_grey {
+        background: $light-gray;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $granat;
+        border-radius: 16px;
+        padding: 25px 20px 22px;
+
+        @include breakpoint(md) {
+            padding: 25px 20px 22px;
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+        }
+
+        span {
+            color: $granat;
+            margin-right: 5px;
+
+            @include breakpoint(md) {
+                margin-right: 30px;
+            }
+        }
+
+        &.is-open {
+            background: $light-gray;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            &:after {
+                content: url('../img/arrow-down-red.svg');
+                transform: rotate(0deg);
+            }
+        }
+
+        &:hover {
+            background: $light-gray;
+        }
+
+        &:after {
+            content: url('../img/arrow-down-granat.svg');
+            float: right;
+        }
+    }
+}
+
+.accordion-content {
+    background: $granat;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+
+    @include breakpoint(md) {
+        padding: 0 20px;
+    }
+
+    &_white {
+        background: $white_light;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 0 20px;
+        color: $granat;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+
+        @include breakpoint(md) {
+            padding: 0 40px;
+        }
+
+        ul {
+            list-style-type: decimal;
+        }
+    }
+
+    &_grey {
+        background: $light-gray;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 0 20px;
+        color: $granat;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        font-family: $euclidLight;
+
+        @include breakpoint(md) {
+            padding: 0 20px;
+        }
+
+        ul {
+            list-style-type: decimal;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+}

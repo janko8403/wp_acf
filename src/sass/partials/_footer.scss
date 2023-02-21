@@ -1,0 +1,96 @@
+footer {
+    background: $granat;
+    padding: 50px 20px 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: $white;
+
+    @include breakpoint(md) {
+        padding: 50px 0 50px;
+    }
+
+    .footer-name {
+        font-family: $euclidSemibold;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $white;
+    }
+
+    ul {
+        list-style: none;
+        padding-top: 10px;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            padding: 0;
+
+            a {
+                font-family: $euclidRegular;
+                color: $white;
+                font-size: 1.4rem;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.bottom-footer {
+    background-color: $dark_granat;
+    padding: 20px 15px;
+    font-family: $euclidRegular;
+
+    @include breakpoint(md) {
+        padding: 20px 0;
+    }
+
+    &_margin {
+        margin-bottom: 20px;
+
+        @include breakpoint(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: $white;
+    }
+
+    ul {
+        display: block;
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            display: block;
+            padding: 0;
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            @include breakpoint(md) {
+                padding: 0 10px;
+                display: inline-block;
+            }
+
+            a {
+                color: $white;
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
